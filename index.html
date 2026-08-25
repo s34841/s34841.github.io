@@ -1,32 +1,242 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8">
-<title>หน้าแนะนำตัวของฉัน</title>
-<style>
-body {
-background-color: #e1bee7; color: #333;
-text-align: center; padding: 50px;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-}
-.card {
-background: white; border-radius: 90px;
-box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-max-width: 500px; margin: 0 auto; padding: 30px;
+    <title>Portfolio | นภัสพร สมกระบวน</title>
 
-}
-h1 { color: #2c3e50; }
-p { font-size: 18px; line-height: 1.6; }
-</style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<div class="card">
-<h1>ยินดีต้อนรับสู่โปรไฟล์ของฉัน </h1>
-<p>สวัสดีค่ะ ดิฉันชื่อ <strong>นางสาวนภัสพร สมกระบวน (Napatsaporn Somkrabuan)</strong></p>
-<p>ขณะนี้กำลังสนใจด้านการจัดการโลจิสติกส์และซับพลายเชน </p>
-<p>นี่คือเว็บไซต์แรกของดิฉันที่โฮสต์บน GitHub Pages!</p>
-  <!--ไปหน้าแฟ้มสะสมผลงาน -->
-  <a href="portfolio.html" class="btn"> แฟ้มสะสมผลงาน</a>
-</div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">IRENE.</div>
+
+        <div class="nav-links">
+            <a href="#home">หน้าแรก</a>
+            <a href="#about">ข้อมูลส่วนตัว</a>
+            <a href="#education">การศึกษา</a>
+            <a href="#activities">กิจกรรม</a>
+            <a href="#contact">ติดต่อ</a>
+        </div>
+    </nav>
+
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+
+        <div class="hero-text">
+            <p class="small-title">PORTFOLIO</p>
+
+            <h1>
+                นภัสพร<br>
+                <span>สมกระบวน</span>
+            </h1>
+
+            <p class="intro">
+                นักเรียนมัธยมศึกษาตอนปลาย<br>
+                ผู้สนใจด้านการจัดการโลจิสติกส์และโซ่อุปทาน
+            </p>
+
+            <a href="#about" class="button">
+                รู้จักฉันมากขึ้น
+            </a>
+        </div>
+
+        <div class="hero-image">
+            <img src="images/profile.jpg" alt="รูปโปรไฟล์ นภัสพร สมกระบวน">
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section id="about" class="section">
+
+        <div class="section-title">
+            <p>01</p>
+            <h2>ข้อมูลส่วนตัว</h2>
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-image">
+                <img src="images/profile.jpg" alt="นภัสพร สมกระบวน">
+            </div>
+
+            <div class="about-info">
+
+                <div class="info-item">
+                    <span>ชื่อ - นามสกุล</span>
+                    <strong>นภัสพร สมกระบวน</strong>
+                </div>
+
+                <div class="info-item">
+                    <span>ชื่อเล่น</span>
+                    <strong>ไอรีน</strong>
+                </div>
+
+                <div class="info-item">
+                    <span>วันเกิด</span>
+                    <strong>22 กันยายน 2008</strong>
+                </div>
+
+                <div class="info-item">
+                    <span>หมู่เลือด</span>
+                    <strong>B</strong>
+                </div>
+
+                <div class="info-item">
+                    <span>เชื้อชาติ / สัญชาติ</span>
+                    <strong>ไทย / ไทย</strong>
+                </div>
+
+                <div class="info-item">
+                    <span>ที่อยู่ปัจจุบัน</span>
+                    <strong>
+                        ตำบลคลองกิ่ว อำเภอบ้านบึง
+                        จังหวัดชลบุรี
+                    </strong>
+                </div>
+
+                <div class="info-item">
+                    <span>งานอดิเรก</span>
+                    <strong>
+                        ฟังเพลง วาดรูป ออกแบบ
+                        และทำงานศิลปะ
+                    </strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Education -->
+    <section id="education" class="section light">
+
+        <div class="section-title">
+            <p>02</p>
+            <h2>การศึกษา</h2>
+        </div>
+
+        <div class="education-card">
+
+            <div class="year">ปัจจุบัน</div>
+
+            <div>
+                <h3>โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”</h3>
+                <p>ระดับมัธยมศึกษาตอนปลาย</p>
+                <p>จังหวัดชลบุรี</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Interest -->
+    <section class="section">
+
+        <div class="section-title">
+            <p>03</p>
+            <h2>เป้าหมายการศึกษาต่อ</h2>
+        </div>
+
+        <div class="goal">
+
+            <p class="goal-label">
+                UNIVERSITY
+            </p>
+
+            <h2>มหาวิทยาลัยบูรพา</h2>
+
+            <p class="faculty">
+                คณะโลจิสติกส์
+            </p>
+
+            <p>
+                สาขาวิชาการจัดการโลจิสติกส์และโซ่อุปทาน
+                <br>
+                แขนงวิชาการจัดการโลจิสติกส์
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Activities -->
+    <section id="activities" class="section light">
+
+        <div class="section-title">
+            <p>04</p>
+            <h2>กิจกรรมและผลงาน</h2>
+        </div>
+
+        <div class="activity-grid">
+
+            <div class="activity-card">
+                <div class="activity-number">01</div>
+                <h3>กิจกรรม</h3>
+                <p>
+                    เพิ่มรายละเอียดกิจกรรม
+                    และบทบาทที่ได้รับ
+                </p>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-number">02</div>
+                <h3>ผลงาน</h3>
+                <p>
+                    เพิ่มผลงานหรือโครงงาน
+                    ที่ภาคภูมิใจ
+                </p>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-number">03</div>
+                <h3>เกียรติบัตร</h3>
+                <p>
+                    เพิ่มรางวัลหรือเกียรติบัตร
+                    ที่ได้รับ
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+
+        <p class="small-title">CONTACT</p>
+
+        <h2>ขอบคุณที่ทำความรู้จัก</h2>
+
+        <p>
+            Portfolio ของ นภัสพร สมกระบวน
+        </p>
+
+    </section>
+
+
+    <footer>
+        <p>© 2026 Naphatporn Somkruan</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
 </body>
 </html>
