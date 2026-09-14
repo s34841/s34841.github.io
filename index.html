@@ -3,785 +3,288 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | นภัสพร สมกระบวน</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@500&display=swap" rel="stylesheet">
+
+    <title>Irene Portfolio</title>
+
     <style>
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
-        html {
-            scroll-behavior: smooth;
-        }
+
         body {
-            font-family: "Kanit", sans-serif;
-            background: #f8f3fb;
-            color: #292235;
-            line-height: 1.7;
-        }
-        /* =========================
-           NAVBAR
-        ========================= */
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            height: 72px;
-            padding: 0 6%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: rgba(255,255,255,0.94);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid #eadff0;
-        }
-        .logo {
-            color: #7043a2;
-            font-family: "Playfair Display", serif;
-            font-size: 25px;
-            font-weight: 500;
-            letter-spacing: 2px;
-        }
-        .logo small {
-            display: block;
-            font-family: "Kanit", sans-serif;
-            font-size: 9px;
-            letter-spacing: 4px;
-            text-align: center;
-            margin-top: -6px;
-        }
-        nav ul {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-        }
-        nav a {
-            color: #51485a;
-            text-decoration: none;
-            font-size: 14px;
-            transition: .3s;
-        }
-        nav a:hover {
-            color: #7546a5;
-        }
-        /* =========================
-           HERO
-        ========================= */
-        .hero {
-            min-height: 650px;
-            padding: 80px 10%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 70px;
+            min-height: 100vh;
+            font-family: Arial, "Tahoma", sans-serif;
+
             background:
-                radial-gradient(circle at 85% 25%, #ead9f5, transparent 32%),
-                #fbf8fd;
-        }
-        .hero-text {
-            max-width: 620px;
-        }
-        .hello {
-            font-family: "Playfair Display", serif;
-            font-size: 38px;
-            font-style: italic;
-            color: #7650a4;
-        }
-        .hero h1 {
-            font-size: clamp(55px, 8vw, 95px);
-            line-height: .95;
-            margin: 12px 0 25px;
-            color: #292235;
-        }
-        .hero h1 span {
-            color: #7043a2;
-        }
-        .nickname {
-            display: inline-block;
-            padding: 6px 20px;
-            background: #7043a2;
-            color: white;
-            border-radius: 6px;
-            font-size: 17px;
-        }
-        .description {
-            margin-top: 25px;
-            max-width: 530px;
-            color: #706878;
-            font-size: 17px;
-        }
-        .hero-photo {
-            width: 370px;
-            height: 470px;
-            border-radius: 190px 190px 30px 30px;
-            overflow: hidden;
-            border: 5px solid white;
-            box-shadow: 0 15px 40px rgba(85,55,110,.15);
-            background: #e9dcf2;
-        }
-        .hero-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        /* =========================
-           GENERAL SECTION
-        ========================= */
-        section {
-            padding: 90px 10%;
-        }
-        .section-heading {
-            margin-bottom: 40px;
-        }
-        .section-number {
-            color: #8052ad;
-            font-size: 14px;
-            letter-spacing: 3px;
-        }
-        .section-heading h2 {
-            font-size: 42px;
-            color: #2d2438;
-        }
-        .section-heading p {
-            color: #8a7f91;
-            font-size: 13px;
-            letter-spacing: 2px;
-        }
-        /* =========================
-           ABOUT
-        ========================= */
-        .about {
-            background: white;
-        }
-        .about-card {
-            background: #fff;
-            padding: 45px;
-            border-radius: 25px;
-            box-shadow: 0 10px 35px rgba(70,40,90,.08);
-            display: grid;
-            grid-template-columns: 1fr 1fr 260px;
-            gap: 35px;
-        }
-        .info {
+                radial-gradient(
+                    circle at 20% 20%,
+                    #e8ddf7 0%,
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #f9f6fd,
+                    #eee7f8
+                );
+
+            color: #40364d;
+
             display: flex;
-            gap: 15px;
-            padding: 17px 0;
-            border-bottom: 1px solid #eee5f2;
-        }
-        .icon {
-            width: 42px;
-            height: 42px;
-            flex-shrink: 0;
-            display: flex;
-            align-items: center;
             justify-content: center;
-            border-radius: 50%;
-            background: #f0e5f7;
-            color: #7043a2;
+            align-items: center;
+
+            padding: 30px;
         }
-        .info span {
-            display: block;
-            color: #958a9c;
-            font-size: 12px;
+
+        .container {
+            width: 100%;
+            max-width: 850px;
+
+            background: rgba(255, 255, 255, 0.9);
+
+            border: 2px solid #b39ddb;
+
+            border-radius: 30px;
+
+            padding: 60px 40px;
+
+            text-align: center;
+
+            box-shadow:
+                0 15px 50px rgba(179, 157, 219, 0.35);
+
+            backdrop-filter: blur(10px);
         }
-        .info strong {
-            font-weight: 400;
-            font-size: 16px;
-        }
-        .hobbies {
-            background: #f3eaf8;
-            border-radius: 20px;
-            padding: 25px;
-        }
-        .hobbies h3 {
-            color: #7043a2;
+
+        .flowers {
+            font-size: 35px;
             margin-bottom: 15px;
         }
-        .hobbies ul {
-            padding-left: 20px;
+
+        h1 {
+            color: #7656a6;
+
+            font-size: 38px;
+
+            margin-bottom: 20px;
         }
-        /* =========================
-           EDUCATION
-        ========================= */
-        .education {
-            background: #f2eaf7;
+
+        .hello {
+            font-size: 20px;
+
+            color: #51465d;
+
+            line-height: 1.8;
+
+            margin-bottom: 5px;
         }
-        .education-box {
-            background: white;
-            padding: 40px;
-            border-radius: 25px;
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            box-shadow: 0 10px 30px rgba(70,40,90,.06);
+
+        .name {
+            font-size: 28px;
+
+            font-weight: bold;
+
+            color: #8b70bd;
+
+            margin-bottom: 30px;
         }
-        .school-placeholder {
-            width: 190px;
-            height: 150px;
+
+        .info {
+            background: #f5effc;
+
             border-radius: 20px;
-            background: linear-gradient(
-                135deg,
-                #cda9e2,
-                #8060a8
-            );
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 50px;
+
+            padding: 25px;
+
+            margin: 25px auto;
+
+            max-width: 600px;
+
+            line-height: 2;
+
+            border: 1px solid #d8c9ed;
         }
-        .education h3 {
-            font-size: 27px;
-            color: #674096;
+
+        .info p {
+            font-size: 17px;
         }
-        .education p {
-            color: #756b7c;
+
+        .highlight {
+            color: #7656a6;
+
+            font-weight: bold;
         }
-        /* =========================
-           GOAL
-        ========================= */
-        .goal {
-            background: white;
-        }
-        .goal-box {
-            padding: 45px;
-            border-radius: 25px;
-            background: linear-gradient(
-                110deg,
-                #7043a2,
-                #9870c2
-            );
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-        .goal-box::after {
-            content: "LOGISTICS";
-            position: absolute;
-            right: -25px;
-            bottom: -35px;
-            font-size: 100px;
-            font-weight: 700;
-            opacity: .08;
-        }
-        .goal-label {
-            font-size: 13px;
-            letter-spacing: 3px;
-            opacity: .75;
-        }
-        .goal-box h2 {
-            font-size: 43px;
-            margin: 8px 0;
-        }
-        .goal-box h3 {
-            font-size: 25px;
-            font-weight: 400;
-        }
-        .goal-box p {
-            opacity: .9;
-        }
-        /* =========================
-           ACTIVITIES
-        ========================= */
-        .activities {
-            background: #f2eaf7;
-        }
-        .activity-grid {
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-            gap: 22px;
-        }
-        .activity {
-            background: white;
-            padding: 35px;
-            min-height: 220px;
-            border-radius: 20px;
-            transition: .3s;
-        }
-        .activity:hover {
-            transform: translateY(-7px);
-            box-shadow: 0 15px 30px rgba(70,40,90,.1);
-        }
-        .activity-number {
-            color: #8052ad;
-            font-size: 13px;
-            letter-spacing: 2px;
-        }
-        .activity h3 {
-            margin: 20px 0 10px;
-            font-size: 23px;
-        }
-        .activity p {
-            color: #7c7282;
-        }
-        /* =========================
-           SKILLS
-        ========================= */
-        .skills {
-            background: white;
-        }
-        .skill-grid {
-            display: grid;
-            grid-template-columns: repeat(4,1fr);
-            gap: 20px;
-        }
-        .skill {
-            padding: 30px;
-            border: 1px solid #e8ddec;
-            border-radius: 18px;
-            text-align: center;
-        }
-        .skill-number {
-            color: #8052ad;
-            font-size: 13px;
-        }
-        .skill h3 {
-            margin: 15px 0 5px;
-        }
-        .skill p {
-            color: #817786;
-            font-size: 14px;
-        }
-        /* =========================
-           CONTACT
-        ========================= */
-        .contact {
-            background: #d8bce7;
-            text-align: center;
-        }
-        .contact h2 {
-            font-size: 45px;
-            color: #35253f;
-        }
-        .contact p {
-            color: #594763;
-        }
-        .contact-info {
+
+        .portfolio-btn {
+            display: inline-block;
+
             margin-top: 25px;
-            font-size: 16px;
-        }
-        /* =========================
-           FOOTER
-        ========================= */
-        footer {
-            padding: 20px;
-            text-align: center;
-            background: #3c2450;
+
+            padding: 15px 35px;
+
+            background: #b39ddb;
+
             color: white;
+
+            text-decoration: none;
+
+            border-radius: 50px;
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+
+            box-shadow:
+                0 8px 20px rgba(179, 157, 219, 0.45);
+        }
+
+        .portfolio-btn:hover {
+            background: #9575c5;
+
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 12px 25px rgba(126, 104, 168, 0.35);
+        }
+
+        .quote {
+            margin-top: 35px;
+
+            color: #8c8197;
+
+            font-style: italic;
+
+            font-size: 15px;
+        }
+
+        .footer {
+            margin-top: 30px;
+
             font-size: 13px;
+
+            color: #aaa0b4;
         }
-        /* =========================
-           MOBILE
-        ========================= */
-        @media (max-width: 850px) {
-            nav {
-                height: auto;
-                padding: 15px 5%;
+
+        /* มือถือ */
+        @media (max-width: 600px) {
+
+            body {
+                padding: 15px;
             }
-            nav ul {
-                display: none;
+
+            .container {
+                padding: 40px 20px;
             }
-            .hero {
-                padding: 60px 7%;
-                flex-direction: column-reverse;
-                text-align: center;
+
+            h1 {
+                font-size: 30px;
             }
-            .hero-photo {
-                width: 270px;
-                height: 350px;
+
+            .hello {
+                font-size: 17px;
             }
-            .description {
-                margin-left: auto;
-                margin-right: auto;
+
+            .name {
+                font-size: 23px;
             }
-            section {
-                padding: 70px 7%;
+
+            .info p {
+                font-size: 15px;
             }
-            .about-card {
-                grid-template-columns: 1fr;
-                padding: 25px;
-            }
-            .education-box {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .activity-grid {
-                grid-template-columns: 1fr;
-            }
-            .skill-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            .goal-box h2 {
-                font-size: 34px;
-            }
-        }
-        @media (max-width: 500px) {
-            .skill-grid {
-                grid-template-columns: 1fr;
-            }
-            .hero h1 {
-                font-size: 55px;
-            }
-            .section-heading h2 {
-                font-size: 34px;
+
+            .portfolio-btn {
+                font-size: 16px;
+                padding: 13px 28px;
             }
         }
     </style>
 </head>
+
 <body>
-<!-- =========================
-     NAVIGATION
-========================= -->
-<nav>
-    <div class="logo">
-        IRENE.
-        <small>PORTFOLIO</small>
-    </div>
-    <ul>
-        <li><a href="#home">หน้าแรก</a></li>
-        <li><a href="#about">ข้อมูลส่วนตัว</a></li>
-        <li><a href="#education">ประวัติการศึกษา</a></li>
-        <li><a href="#goal">เหตุผล</a></li>
-        <li><a href="#activities">กิจกรรม</a></li>
-        <li><a href="#skills">ทักษะ</a></li>
-    </ul>
-</nav>
-<!-- =========================
-     HERO
-========================= -->
-<section class="hero" id="home">
-    <div class="hero-text">
-        <p class="hello">
-            Hello, welcome to my portfolio
-        </p>
+
+    <div class="container">
+
+        <div class="flowers">
+            ✈️ ✨
+        </div>
+
         <h1>
-            นภัสพร<br>
-            <span>สมกระบวน</span>
+            ยินดีต้อนรับสู่โปรไฟล์ของฉัน
         </h1>
-        <div class="nickname">
-            ชื่อเล่น : ไอรีน
-        </div>
-        <p class="description">
-            ปัจจุบันกำลังศึกษาอยู่ชั้นมัธยมศึกษาปีที่ 6
 
-    โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”
-
-    แผนการเรียนวิทยาศาสตร์-คณิตศาสตร์ (GIFTED PROGRAM)
-
-    มีความสนใจศึกษาต่อคณะโลจิสติกส์
-
-    แขนงวิชาการจัดการโลจิสติกส์
-
-    มหาวิทยาลัยบูรพา
+        <p class="hello">
+            สวัสดีค่ะ! ดิฉันชื่อ
         </p>
-    </div>
-    <div class="hero-photo">
-        <!--
-        ถ้ามีรูปตัวเอง
-        ให้สร้างโฟลเดอร์ images
-        แล้วใส่รูปชื่อ profile.jpg
-        -->
-        <img
-            src="ADC6B241-EB33-4344-89C4-C6A18F9D12CD.jpeg"
-            alt="Profile"
-        >
-    </div>
-</section>
-<!-- =========================
-     ABOUT ME
-========================= -->
-<section class="about" id="about">
-    <div class="section-heading">
-        <span class="section-number">
-            01
-        </span>
-        <h2>
-            ข้อมูลส่วนตัว
-        </h2>
-        <p>
-            ABOUT ME
-        </p>
-    </div>
-    <div class="about-card">
-        <div>
-            <div class="info">
-                <div class="icon">♙</div>
-                <div>
-                    <span>ชื่อ - นามสกุล</span>
-                    <strong>นภัสพร สมกระบวน</strong>
-                </div>
-            </div>
-            <div class="info">
-                <div class="icon">✎</div>
-                <div>
-                    <span>ชื่อเล่น</span>
-                    <strong>ไอรีน</strong>
-                </div>
-            </div>
-            <div class="info">
-                <div class="icon">◷</div>
-                <div>
-                    <span>วันเกิด</span>
-                    <strong>22 กันยายน 2008</strong>
-                </div>
-            </div>
-            <div class="info">
-                <div class="icon">●</div>
-                <div>
-                    <span>หมู่เลือด</span>
-                    <strong>B</strong>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="info">
-                <div class="icon">◎</div>
-                <div>
-                    <span>เชื้อชาติ</span>
-                    <strong>ไทย</strong>
-                </div>
-            </div>
-            <div class="info">
-                <div class="icon">◎</div>
-                <div>
-                    <span>สัญชาติ</span>
-                    <strong>ไทย</strong>
-                </div>
-            </div>
-            <div class="info">
-                <div class="icon">⌂</div>
-                <div>
-                    <span>ที่อยู่ปัจจุบัน</span>
-                    <strong>
-                        ตำบลคลองกิ่ว
-                        อำเภอบ้านบึง
-                        จังหวัดชลบุรี
-                    </strong>
-                </div>
-            </div>
-        </div>
-        <div class="hobbies">
-            <h3>
-                 งานอดิเรก
-            </h3>
-            <ul>
-                <li>ฟังเพลง</li>
-                <li>วาดรูป</li>
-                <li>อ่านวารสารดาราศาสตร์</li>
-                <li>ทำงานศิลปะ</li>
-                <li>ปลูกต้นไม้</li>
-            </ul>
-        </div>
-    </div>
-</section>
-<!-- =========================
-     EDUCATION
-========================= -->
-<section class="education" id="education">
-    <div class="section-heading">
-        <span class="section-number">
-            02
-        </span>
-        <h2>
-            การศึกษา
-        </h2>
-        <p>
-            EDUCATION
-        </p>
-    </div>
-    <<div class="education-timeline">
 
-    <!-- มัธยมศึกษาตอนต้น -->
-<div class="education-item" style="margin-bottom: 40px;">
-    <div class="education-year">2564 - 2566</div>
-    <div class="education-content">
-        <h3>โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”</h3>
-        <p>ชั้นมัธยมศึกษาตอนต้น</p>
-        <p>ห้องเรียนพิเศษ English Program (EP)</p>
-        <p>เกรดเฉลี่ย 3.50</p>
-    </div>
-</div>
-
-<!-- มัธยมศึกษาตอนปลาย -->
-<div class="education-item">
-    <div class="education-year">2567 - 2569</div>
-    <div class="education-content">
-        <h3>โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”</h3>
-        <p>ชั้นมัธยมศึกษาตอนปลาย</p>
-        <p>แผนการเรียนวิทยาศาสตร์-คณิตศาสตร์ (GIFTED PROGRAM)</p>
-        <p>เกรดเฉลี่ย 3.45</p>
-    </div>
-</div>
-
-</div>
-</section>
-<!-- =========================
-     GOAL
-========================= -->
-<section class="goal" id="goal">
-    <div class="section-heading">
-        <span class="section-number">
-            03
-        </span>
-        <h2>
-            เหตุผลในการเข้าศึกษา
-        </h2>
-        <p>
-        </p>
-    </div>
-    <div class="goal-box">
-        <p class="goal-label">
-            MY DREAM UNIVERSITY
-        </p>
-        <h2>
-            มหาวิทยาลัยบูรพา
-        </h2>
-        <h3>
-            คณะโลจิสติกส์ สาขาวิชาการจัดการโลจิสติกส์และโซ่อุปทาน
-        </h3>
-        <br>
-        </p>
-        <p>
-                     ข้าพเจ้ามีความสนใจเข้าศึกษาต่อในคณะโลจิสติกส์ สาขาวิชาการจัดการโลจิสติกส์และโซ่อุปทาน วิชาเอกแขนงการจัดการโลจิสติกส์ 
-            
-มหาวิทยาลัยบูรพา เนื่องจากข้าพเจ้ามองว่าโลจิสติกส์เป็นระบบสำคัญที่อยู่เบื้องหลังการดำเนินชีวิตของผู้คนในหลายด้าน 
-            
-และเป็นศาสตร์ที่ต้องอาศัยทั้งการวางแผน การจัดการ และการแก้ไขปัญหาอย่างเป็นระบบ ข้าพเจ้าจึงต้องการเรียนรู้และพัฒนาทักษะเหล่านี้ เพื่อนำไปต่อยอดในการศึกษาและการทำงานในอนาคต
-
-จุดเริ่มต้นที่ทำให้ข้าพเจ้าสนใจด้านโลจิสติกส์มาจากช่วงการแพร่ระบาดของโควิด-19 ในเวลานั้นหลายสิ่งรอบตัวต้องหยุดชะงัก ทั้งการเดินทาง การทำงาน และการดำเนินชีวิตของผู้คน แต่ระบบโลจิสติกส์ยังคงเดินหน้าต่อไป การขนส่งและการกระจายสินค้ายังคงดำเนินต่อเพื่อให้สิ่งของที่จำเป็นสามารถไปถึงผู้คนได้ เหตุการณ์นี้ทำให้ข้าพเจ้าเกิดความสนใจและตั้งคำถามว่า อะไรคือเบื้องหลังที่ทำให้ระบบหนึ่งสามารถดำเนินต่อได้ แม้ในช่วงเวลาที่เกิดวิกฤต จึงทำให้ข้าพเจ้าอยากศึกษาโลจิสติกส์อย่างจริงจัง และเข้าใจการทำงานของระบบเหล่านี้ให้มากยิ่งขึ้น
-
-เหตุผลที่ข้าพเจ้าเลือกมหาวิทยาลัยบูรพา เพราะเป็นมหาวิทยาลัยที่มีชื่อเสียงและมีความโดดเด่นด้านโลจิสติกส์ อีกทั้งจังหวัดชลบุรียังเป็นพื้นที่สำคัญด้านอุตสาหกรรม การค้า และการขนส่ง ทำให้ข้าพเจ้าเชื่อว่าการได้ศึกษาในสภาพแวดล้อมเช่นนี้จะช่วยให้สามารถเรียนรู้และมองเห็นการประยุกต์ใช้ความรู้ด้านโลจิสติกส์ได้ชัดเจนยิ่งขึ้น หากได้รับโอกาสเข้าศึกษา ข้าพเจ้าจะตั้งใจพัฒนาความรู้ ความสามารถ และประสบการณ์ของตนเองอย่างเต็มที่ เพื่อเตรียมพร้อมสำหรับการนำความรู้ไปใช้ในการทำงานและเป็นส่วนหนึ่งในการขับเคลื่อนระบบโลจิสติกส์ให้สามารถดำเนินไปได้อย่างมีประสิทธิภาพ
-        </p>
-    </div>
-</section>
-<!-- =========================
-     ACTIVITIES
-========================= -->
-<section class="activities" id="activities">
-    <div class="section-heading">
-        <span class="section-number">
-            04
-        </span>
-        <h2>
-            กิจกรรมและผลงาน
-        </h2>
-        <p>
-            ACTIVITIES & WORKS
-        </p>
-    </div>
-    <div class="activity-grid">
-        <div class="activity">
-            <span class="activity-number">
-                01
-            </span>
-            <h3>
-                กิจกรรม
-            </h3>
-            <!-- รายการที่ 1 -->
-  <div class="cert-item">
-    <img src="IMG_0684.jpeg" alt="เกียรติบัตร 1" style="width: 100%; max-width: 400px; margin-top: 10px;">
-    <p>ข้าพเจ้าได้รับคัดเลือกเป็นตัวแทนในการจัดทำพานไหว้ครู ประจำปีการศึกษา 2568 โดยมีส่วนร่วมในการออกแบบและประดิษฐ์พานร่วมกับเพื่อน ๆ ได้ฝึกความคิดสร้างสรรค์ ความละเอียดรอบคอบ และการทำงานเป็นทีม จนได้รับรางวัลชมเชยจากการประกวดพานไหว้ครู</p>
-  </div>
-
-  <!-- รายการที่ 2 -->
-  <div class="cert-item">
-    <img src="IMG_0685.jpeg" alt="เกียรติบัตร 2" style="width: 100%; max-width: 400px; margin-top: 10px;">
-    <p>ข้าพเจ้าได้เข้าร่วมกิจกรรมปลูกป่าชายเลน เมื่อวันที่ 29 เมษายน 2569 โดยร่วมปลูกต้นโกงกางและเรียนรู้ถึงความสำคัญของระบบนิเวศป่าชายเลน กิจกรรมนี้ช่วยสร้างจิตสำนึกในการอนุรักษ์สิ่งแวดล้อมและฝึกการทำงานร่วมกับผู้อื่น</p>
-  </div>
-        </div>
-        
-        <div class="activity">
-  <span class="activity-number">02</span>
-  <h3>เกียรติบัตร</h3>
-  
-  <!-- รายการที่ 1 -->
-  <div class="cert-item">
-    <img src="IMG_0678.jpeg" alt="เกียรติบัตร 1" style="width: 100%; max-width: 400px; margin-top: 10px;">
-    <p>ข้าพเจ้าได้เข้าร่วมงาน Fast Lane Open House 2025 ส่งด่วน สู่อนาคต ณ คณะโลจิสติกส์ มหาวิทยาลัยบูรพา โดยได้พูดคุยและแลกเปลี่ยนประสบการณ์กับรุ่นพี่ในคณะ ทำให้ข้าพเจ้าได้เรียนรู้เกี่ยวกับการเรียนและการใช้ชีวิตในคณะ รวมถึงได้เปิดมุมมองใหม่ ๆ เกี่ยวกับศาสตร์ด้านโลจิสติกส์ ประสบการณ์ครั้งนี้ทำให้ข้าพเจ้าเข้าใจสาขาที่สนใจมากยิ่งขึ้น และยิ่งมั่นใจในการเลือกศึกษาต่อด้านโลจิสติกส์ในอนาคต</p>
-  </div>
-
-  <!-- รายการที่ 2 -->
-  <div class="cert-item">
-    <img src="IMG_0681.jpeg" alt="เกียรติบัตร 2" style="width: 100%; max-width: 400px; margin-top: 10px;">
-    <p>ข้าพเจ้าได้เข้าร่วมค่ายพัฒนาคุณธรรมและจริยธรรม โดยทำกิจกรรมทางธรรมะร่วมกับเพื่อน ๆ ได้ฝึกการมีสติ ความรับผิดชอบ และการอยู่ร่วมกับผู้อื่นอย่างเข้าใจ ซึ่งสามารถนำข้อคิดที่ได้รับมาปรับใช้ในชีวิตประจำวันได้</p>
-  </div>
-
-  <!-- รายการที่ 3 -->
-  <div class="cert-item">
-    <img src="IMG_0682.jpeg" alt="เกียรติบัตร 3" style="width: 100%; max-width: 400px; margin-top: 10px;">
-    <p>ข้าพเจ้าได้เข้าร่วมโครงการ “เปิดโลกวิชาการ 2026” ได้รับฟังการบรรยายและคำแนะนำจากอาจารย์ ผู้ช่วยอธิการบดี และรุ่นพี่ พร้อมทั้งเข้าร่วมกิจกรรมตามฐานและได้ทดลองปฏิบัติจริง ทำให้ข้าพเจ้าได้เปิดมุมมองด้านการศึกษาต่อ ได้เรียนรู้จากประสบการณ์จริง รู้จักเพื่อนใหม่ และฝึกการทำงานร่วมกับผู้อื่น</p>
-  </div>
-</div>
-
-    </div>
-</section>
-<!-- =========================
-     SKILLS
-========================= -->
-<section class="skills" id="skills">
-    <div class="section-heading">
-        <span class="section-number">
-            05
-        </span>
-        <h2>
-            ทักษะและความสามารถ
-        </h2>
-        <p>
-            SKILLS
-        </p>
-    </div>
-    <div class="skill-grid">
-        <div class="skill">
-            <span class="skill-number">01</span>
-            <h3>บริหารเวลา</h3>
-            <p>สามารถจัดลำดับความสำคัญของงาน วางแผนการใช้เวลา และจัดการงานต่าง ๆ ให้เสร็จตามระยะเวลาที่กำหนดได้อย่างเหมาะสม</p>
-        </div>
-        <div class="skill">
-            <span class="skill-number">02</span>
-            <h3>ความยืดหยุ่นและการปรับตัว</h3>
-            <p>สามารถปรับตัวให้เข้ากับสถานการณ์และรูปแบบการทำงานที่เปลี่ยนแปลงได้ พร้อมเรียนรู้สิ่งใหม่และรับมือกับปัญหาที่เกิดขึ้นอย่างเหมาะสม</p>
-        </div>
-        <div class="skill">
-            <span class="skill-number">03</span>
-            <h3>การสื่อสาร</h3>
-            <p>สามารถสื่อสารและแลกเปลี่ยนความคิดเห็นกับผู้อื่นได้อย่างชัดเจน รับฟังความคิดเห็น และประสานงานร่วมกับผู้อื่นได้อย่างเหมาะสม</p>
-        </div>
-        <div class="skill">
-            <span class="skill-number">04</span>
-            <h3>การทำงานเป็นทีม</h3>
-            <p>สามารถทำงานร่วมกับผู้อื่น แบ่งหน้าที่และความรับผิดชอบอย่างเหมาะสม พร้อมร่วมมือกันเพื่อให้งานบรรลุเป้าหมาย</p>
-        </div>
-    </div>
-</section>
-<!-- =========================
-     CONTACT
-========================= -->
-<section class="contact" id="contact">
-    <h2>
-        Thank you ♡
-    </h2>
-    <p>
-        ขอบคุณที่เข้ามาทำความรู้จัก
-    </p>
-    <div class="contact-info">
-        <p>
+        <p class="name">
             นภัสพร สมกระบวน
         </p>
+
         <p>
-            ตำบลคลองกิ่ว อำเภอบ้านบึง
-            จังหวัดชลบุรี
+            (Napatsaporn Somkrabuan)
         </p>
+
+
+        <div class="info">
+
+            <p>
+                ปัจจุบันกำลังศึกษาอยู่ชั้น
+                <span class="highlight">
+                    มัธยมศึกษาปีที่ 6
+                </span>
+            </p>
+
+            <p>
+                โรงเรียนบ้านบึง
+                “อุตสาหกรรมนุเคราะห์”
+            </p>
+
+            <p>
+                 มีความสนใจศึกษาต่อคณะ
+                <span class="highlight">
+                    โลจิสติกส์ สาขาการจัดการโลจิสติกส์
+                    และโซ่อุปทาน
+                </span>
+            </p>
+
+            <p>
+                <span class="highlight">
+                    มหาวิทยาลัยบูรพา
+                </span>
+            </p>
+
+        </div>
+
+
+        <p>
+            💻 นี่คือเว็บไซต์ Portfolio
+            สำหรับรวบรวมประวัติการศึกษา
+            กิจกรรม และผลงานของฉัน
+        </p>
+
+
+        <a
+            href="portfolio.html"
+            class="portfolio-btn"
+        >
+             ดูแฟ้มสะสมผลงาน 
+        </a>
+
+
+        <p class="quote">
+            “Love Yourself Speak Yourself.”
+        </p>
+
+
+        <div class="footer">
+            © 2026 Irene Portfolio
+        </div>
+
     </div>
-</section>
-<!-- =========================
-     FOOTER
-========================= -->
-<footer>
-    © 2026 Napatsaporn Somkrabuan
-    · Portfolio
-</footer>
+
 </body>
 </html>
