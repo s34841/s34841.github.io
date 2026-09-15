@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>กิจกรรม | Irene Portfolio</title>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            font-family:
+                Arial,
+                "Tahoma",
+                sans-serif;
+
+            color: #40364d;
+
+            background:
+
+                radial-gradient(
+                    circle at 15% 15%,
+                    #e8ddf7 0%,
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 85% 85%,
+                    #ddd0f0 0%,
+                    transparent 30%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #f9f6fd,
+                    #eee7f8
+                );
+
+            padding: 30px;
+
+        }
+
+
+        /* =========================
+           MAIN CONTAINER
+        ========================= */
+
+        .container {
+
+            width: 100%;
+
+            max-width: 1000px;
+
+            margin: auto;
+
+            background:
+                rgba(255,255,255,0.93);
+
+            border:
+                2px solid #b39ddb;
+
+            border-radius:
+                30px;
+
+            padding:
+                45px;
+
+            box-shadow:
+                0 15px 50px
+                rgba(179,157,219,0.35);
+
+            backdrop-filter:
+                blur(10px);
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        /* =========================
+           DECORATION
+        ========================= */
+
+        .decoration {
+
+            position: absolute;
+
+            font-size: 35px;
+
+            opacity: 0.75;
+
+        }
+
+
+        .one {
+            top: 25px;
+            left: 30px;
+        }
+
+
+        .two {
+            top: 30px;
+            right: 35px;
+        }
+
+
+        .three {
+            bottom: 25px;
+            left: 35px;
+        }
+
+
+        .four {
+            bottom: 25px;
+            right: 35px;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .header {
+
+            text-align: center;
+
+            margin-bottom: 35px;
+
+        }
+
+
+        .rabbit {
+
+            font-size: 48px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .header h1 {
+
+            color: #7656a6;
+
+            font-size: 40px;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .english {
+
+            color: #8c8197;
+
+            font-size: 15px;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        .line {
+
+            width: 100px;
+
+            height: 4px;
+
+            background: #b39ddb;
+
+            border-radius: 10px;
+
+            margin: 18px auto;
+
+        }
+
+
+        /* =========================
+           ACTIVITY GRID
+        ========================= */
+
+        .activity-container {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+
+        }
+
+
+        /* =========================
+           ACTIVITY CARD
+        ========================= */
+
+        .activity-card {
+
+            background: #f5effc;
+
+            border:
+                1px solid #d8c9ed;
+
+            border-radius: 25px;
+
+            overflow: hidden;
+
+            transition: 0.3s;
+
+            box-shadow:
+                0 5px 15px
+                rgba(179,157,219,0.12);
+
+        }
+
+
+        .activity-card:hover {
+
+            transform:
+                translateY(-8px);
+
+            box-shadow:
+                0 15px 30px
+                rgba(179,157,219,0.3);
+
+        }
+
+
+        /* =========================
+           IMAGE
+        ========================= */
+
+        .activity-image {
+
+            width: 100%;
+
+            height: 210px;
+
+            background: #eee4fa;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            overflow: hidden;
+
+        }
+
+
+        .activity-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: 0.4s;
+
+        }
+
+
+        .activity-card:hover
+        .activity-image img {
+
+            transform: scale(1.05);
+
+        }
+
+
+        /* =========================
+           CARD CONTENT
+        ========================= */
+
+        .activity-content {
+
+            padding: 23px;
+
+        }
+
+
+        .activity-number {
+
+            display: inline-block;
+
+            background: #b39ddb;
+
+            color: white;
+
+            padding:
+                5px 13px;
+
+            border-radius: 50px;
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .activity-content h2 {
+
+            color: #7656a6;
+
+            font-size: 21px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .activity-content p {
+
+            color: #51465d;
+
+            font-size: 15px;
+
+            line-height: 1.8;
+
+        }
+
+
+        .activity-detail {
+
+            margin-top: 15px;
+
+            padding-top: 12px;
+
+            border-top:
+                1px solid #d8c9ed;
+
+            color: #8c8197;
+
+            font-size: 13px;
+
+        }
+
+
+        /* =========================
+           BACK BUTTON
+        ========================= */
+
+        .button-area {
+
+            text-align: center;
+
+            margin-top: 40px;
+
+        }
+
+
+        .back-button {
+
+            display: inline-block;
+
+            padding:
+                14px 32px;
+
+            background:
+                #b39ddb;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 50px;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+
+            box-shadow:
+                0 8px 20px
+                rgba(179,157,219,0.45);
+
+        }
+
+
+        .back-button:hover {
+
+            background:
+                #9575c5;
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 12px 25px
+                rgba(126,104,168,0.35);
+
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .footer {
+
+            text-align: center;
+
+            margin-top: 30px;
+
+            color: #aaa0b4;
+
+            font-size: 13px;
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .activity-container {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+            .activity-image {
+
+                height: 230px;
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            body {
+
+                padding: 15px;
+
+            }
+
+
+            .container {
+
+                padding:
+                    35px 20px;
+
+            }
+
+
+            .header h1 {
+
+                font-size: 32px;
+
+            }
+
+
+            .rabbit {
+
+                font-size: 40px;
+
+            }
+
+
+            .activity-content h2 {
+
+                font-size: 19px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- ของตกแต่ง -->
+
+    <div class="decoration one">
+        ✨
+    </div>
+
+    <div class="decoration two">
+        💜
+    </div>
+
+    <div class="decoration three">
+        🌷
+    </div>
+
+    <div class="decoration four">
+        🐰
+    </div>
+
+
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+        <div class="rabbit">
+            🐰
+        </div>
+
+        <h1>
+            กิจกรรม
+        </h1>
+
+        <p class="english">
+            ACTIVITIES
+        </p>
+
+        <div class="line"></div>
+
+    </div>
+
+
+
+    <!-- =========================
+         ACTIVITY 1
+    ========================= -->
+
+    <div class="activity-container">
+
+
+        <div class="activity-card">
+
+
+            <div class="activity-image">
+
+                <img
+                    src="activity1.jpg"
+                    alt="กิจกรรมที่ 1"
+                >
+
+            </div>
+
+
+            <div class="activity-content">
+
+                <span class="activity-number">
+                    ACTIVITY 01
+                </span>
+
+                <h2>
+                    🏃🏻‍♀️ กิจกรรมกีฬาสี
+                </h2>
+
+                <p>
+                    เข้าร่วมกิจกรรมกีฬาสีของโรงเรียน
+                    ได้มีส่วนร่วมในการทำงานร่วมกับเพื่อน
+                    และฝึกความสามัคคี ความรับผิดชอบ
+                    และการทำงานเป็นทีม
+                </p>
+
+
+                <div class="activity-detail">
+
+                    📌 สิ่งที่ได้รับ :
+                    ความสามัคคีและการทำงานเป็นทีม
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             ACTIVITY 2
+        ========================= -->
+
+        <div class="activity-card">
+
+
+            <div class="activity-image">
+
+                <img
+                    src="activity2.jpg"
+                    alt="กิจกรรมที่ 2"
+                >
+
+            </div>
+
+
+            <div class="activity-content">
+
+                <span class="activity-number">
+                    ACTIVITY 02
+                </span>
+
+                <h2>
+                    🤝 กิจกรรมจิตอาสา
+                </h2>
+
+                <p>
+                    เข้าร่วมกิจกรรมจิตอาสา
+                    เพื่อช่วยเหลือและทำประโยชน์
+                    ให้แก่โรงเรียนและชุมชน
+                    พร้อมทั้งเรียนรู้การเสียสละ
+                    และการทำงานร่วมกับผู้อื่น
+                </p>
+
+
+                <div class="activity-detail">
+
+                    📌 สิ่งที่ได้รับ :
+                    ความรับผิดชอบและจิตสาธารณะ
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             ACTIVITY 3
+        ========================= -->
+
+        <div class="activity-card">
+
+
+            <div class="activity-image">
+
+                <img
+                    src="activity3.jpg"
+                    alt="กิจกรรมที่ 3"
+                >
+
+            </div>
+
+
+            <div class="activity-content">
+
+                <span class="activity-number">
+                    ACTIVITY 03
+                </span>
+
+                <h2>
+                    🎓 กิจกรรมด้านการศึกษา
+                </h2>
+
+                <p>
+                    เข้าร่วมกิจกรรมที่เกี่ยวข้องกับ
+                    การเรียนรู้และพัฒนาทักษะ
+                    ได้รับประสบการณ์ใหม่ ๆ
+                    และนำความรู้ที่ได้รับ
+                    มาพัฒนาตนเอง
+                </p>
+
+
+                <div class="activity-detail">
+
+                    📌 สิ่งที่ได้รับ :
+                    ความรู้และประสบการณ์ใหม่
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- BACK BUTTON -->
+
+    <div class="button-area">
+
+        <a
+            href="portfolio.html"
+            class="back-button"
+        >
+            🏠 กลับหน้า Portfolio
+        </a>
+
+    </div>
+
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        © 2026 Irene Portfolio 💜
+
+    </div>
+
+
+</div>
+
+
+</body>
+
+</html>
