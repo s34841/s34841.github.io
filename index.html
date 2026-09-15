@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Irene Portfolio</title>
 
+
     <style>
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
+
         body {
+
             min-height: 100vh;
-            font-family: Arial, "Tahoma", sans-serif;
+
+            font-family:
+                Arial,
+                "Tahoma",
+                sans-serif;
 
             background:
+
                 radial-gradient(
                     circle at 20% 20%,
                     #e8ddf7 0%,
                     transparent 30%
                 ),
+
                 linear-gradient(
                     135deg,
                     #f9f6fd,
@@ -32,46 +46,120 @@
             color: #40364d;
 
             display: flex;
+
             justify-content: center;
+
             align-items: center;
 
             padding: 30px;
+
         }
 
+
+        /* =========================
+           MAIN CONTAINER
+        ========================= */
+
         .container {
+
             width: 100%;
+
             max-width: 850px;
 
-            background: rgba(255, 255, 255, 0.9);
+            background:
+                rgba(255, 255, 255, 0.9);
 
-            border: 2px solid #b39ddb;
+            border:
+                2px solid #b39ddb;
 
-            border-radius: 30px;
+            border-radius:
+                30px;
 
-            padding: 60px 40px;
+            padding:
+                60px 40px;
 
             text-align: center;
 
             box-shadow:
-                0 15px 50px rgba(179, 157, 219, 0.35);
+                0 15px 50px
+                rgba(179, 157, 219, 0.35);
 
-            backdrop-filter: blur(10px);
+            backdrop-filter:
+                blur(10px);
+
         }
+
+
+        /* =========================
+           TOP DECORATION
+        ========================= */
 
         .flowers {
+
             font-size: 35px;
+
             margin-bottom: 15px;
+
         }
 
+
+        /* =========================
+           PROFILE IMAGE
+        ========================= */
+
+        .profile-image {
+
+            width: 170px;
+
+            height: 170px;
+
+            margin:
+                0 auto 25px;
+
+            border-radius: 50%;
+
+            overflow: hidden;
+
+            border:
+                4px solid #b39ddb;
+
+            box-shadow:
+                0 8px 20px
+                rgba(179, 157, 219, 0.35);
+
+        }
+
+
+        .profile-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+        }
+
+
+        /* =========================
+           TITLE
+        ========================= */
+
         h1 {
+
             color: #7656a6;
 
             font-size: 38px;
 
             margin-bottom: 20px;
+
         }
 
+
         .hello {
+
             font-size: 20px;
 
             color: #51465d;
@@ -79,19 +167,29 @@
             line-height: 1.8;
 
             margin-bottom: 5px;
+
         }
 
+
         .name {
+
             font-size: 28px;
 
             font-weight: bold;
 
             color: #8b70bd;
 
-            margin-bottom: 30px;
+            margin-bottom: 10px;
+
         }
 
+
+        /* =========================
+           INFORMATION
+        ========================= */
+
         .info {
+
             background: #f5effc;
 
             border-radius: 20px;
@@ -104,25 +202,40 @@
 
             line-height: 2;
 
-            border: 1px solid #d8c9ed;
+            border:
+                1px solid #d8c9ed;
+
         }
+
 
         .info p {
+
             font-size: 17px;
+
         }
 
+
         .highlight {
+
             color: #7656a6;
 
             font-weight: bold;
+
         }
 
+
+        /* =========================
+           PORTFOLIO BUTTON
+        ========================= */
+
         .portfolio-btn {
+
             display: inline-block;
 
             margin-top: 25px;
 
-            padding: 15px 35px;
+            padding:
+                15px 35px;
 
             background: #b39ddb;
 
@@ -139,19 +252,32 @@
             transition: 0.3s;
 
             box-shadow:
-                0 8px 20px rgba(179, 157, 219, 0.45);
+                0 8px 20px
+                rgba(179, 157, 219, 0.45);
+
         }
+
 
         .portfolio-btn:hover {
+
             background: #9575c5;
 
-            transform: translateY(-4px);
+            transform:
+                translateY(-4px);
 
             box-shadow:
-                0 12px 25px rgba(126, 104, 168, 0.35);
+                0 12px 25px
+                rgba(126, 104, 168, 0.35);
+
         }
 
+
+        /* =========================
+           QUOTE
+        ========================= */
+
         .quote {
+
             margin-top: 35px;
 
             color: #8c8197;
@@ -159,79 +285,149 @@
             font-style: italic;
 
             font-size: 15px;
+
         }
 
+
+        /* =========================
+           FOOTER
+        ========================= */
+
         .footer {
+
             margin-top: 30px;
 
             font-size: 13px;
 
             color: #aaa0b4;
+
         }
 
-        /* มือถือ */
+
+        /* =========================
+           MOBILE
+        ========================= */
+
         @media (max-width: 600px) {
 
             body {
+
                 padding: 15px;
+
             }
+
 
             .container {
-                padding: 40px 20px;
+
+                padding:
+                    40px 20px;
+
             }
+
+
+            .profile-image {
+
+                width: 150px;
+
+                height: 150px;
+
+                margin-bottom: 20px;
+
+            }
+
 
             h1 {
+
                 font-size: 30px;
+
             }
+
 
             .hello {
+
                 font-size: 17px;
+
             }
+
 
             .name {
+
                 font-size: 23px;
+
             }
+
 
             .info p {
+
                 font-size: 15px;
+
             }
 
+
             .portfolio-btn {
+
                 font-size: 16px;
-                padding: 13px 28px;
+
+                padding:
+                    13px 28px;
+
             }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
+
     <div class="container">
 
+
+        <!-- TOP DECORATION -->
+
         <div class="flowers">
-    ✈️ ✨
-</div>
+            ✈️ ✨
+        </div>
 
-<div class="profile-image">
-    <img src="ADC6B241-EB33-4344-89C4-C6A18F9D12CD.jpeg" alt=ADC6B241-EB33-4344-89C4-C6A18F9D12CD.jpeg > 
-</div>
 
-<h1>
-    Hello , Welcome to my portfolio.
-</h1>
+        <!-- PROFILE IMAGE -->
+
+        <div class="profile-image">
+
+            <img
+                src="ADC6B241-EB33-4344-89C4-C6A18F9D12CD.jpeg"
+                alt="รูปโปรไฟล์ของนภัสพร สมกระบวน"
+            >
+
+        </div>
+
+
+        <!-- TITLE -->
+
+        <h1>
+            Hello , Welcome to my portfolio.
+        </h1>
+
 
         <p class="hello">
             สวัสดีค่ะ! ดิฉันชื่อ
         </p>
 
+
         <p class="name">
             นางสาวนภัสพร สมกระบวน
         </p>
+
 
         <p>
             (Napatsaporn Somkrabuan)
         </p>
 
+
+        <!-- INFORMATION -->
 
         <div class="info">
 
@@ -242,18 +438,21 @@
                 </span>
             </p>
 
+
             <p>
                 โรงเรียนบ้านบึง
                 “อุตสาหกรรมนุเคราะห์”
             </p>
 
+
             <p>
-                 มีความสนใจศึกษาต่อคณะ
+                มีความสนใจศึกษาต่อคณะ
                 <span class="highlight">
                     โลจิสติกส์ สาขาการจัดการโลจิสติกส์
                     และโซ่อุปทาน
                 </span>
             </p>
+
 
             <p>
                 <span class="highlight">
@@ -264,6 +463,8 @@
         </div>
 
 
+        <!-- PORTFOLIO DESCRIPTION -->
+
         <p>
             💻 นี่คือเว็บไซต์ Portfolio
             สำหรับรวบรวมประวัติการศึกษา
@@ -271,24 +472,33 @@
         </p>
 
 
+        <!-- BUTTON -->
+
         <a
             href="portfolio.html"
             class="portfolio-btn"
         >
-             ดูแฟ้มสะสมผลงาน 
+            ดูแฟ้มสะสมผลงาน
         </a>
 
+
+        <!-- QUOTE -->
 
         <p class="quote">
             “Love Yourself Speak Yourself.”
         </p>
 
 
+        <!-- FOOTER -->
+
         <div class="footer">
             © 2026 Irene Portfolio
         </div>
 
+
     </div>
 
+
 </body>
+
 </html>
