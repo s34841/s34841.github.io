@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ประวัติส่วนตัว | Irene Portfolio</title>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            font-family:
+                Arial,
+                "Tahoma",
+                sans-serif;
+
+            color: #40364d;
+
+            background:
+
+                radial-gradient(
+                    circle at 15% 15%,
+                    #e8ddf7 0%,
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 85% 85%,
+                    #ddd0f0 0%,
+                    transparent 30%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #f9f6fd,
+                    #eee7f8
+                );
+
+            padding: 30px;
+
+        }
+
+
+        /* =========================
+           CONTAINER
+        ========================= */
+
+        .container {
+
+            width: 100%;
+
+            max-width: 950px;
+
+            margin: auto;
+
+            background:
+                rgba(255,255,255,0.93);
+
+            border:
+                2px solid #b39ddb;
+
+            border-radius:
+                30px;
+
+            padding:
+                45px;
+
+            box-shadow:
+                0 15px 50px
+                rgba(179,157,219,0.35);
+
+            backdrop-filter:
+                blur(10px);
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        /* =========================
+           DECORATION
+        ========================= */
+
+        .decoration {
+
+            position: absolute;
+
+            font-size: 35px;
+
+            opacity: 0.75;
+
+        }
+
+
+        .one {
+            top: 25px;
+            left: 30px;
+        }
+
+
+        .two {
+            top: 30px;
+            right: 35px;
+        }
+
+
+        .three {
+            bottom: 25px;
+            left: 35px;
+        }
+
+
+        .four {
+            bottom: 25px;
+            right: 35px;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .header {
+
+            text-align: center;
+
+            margin-bottom: 35px;
+
+        }
+
+
+        .rabbit {
+
+            font-size: 48px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .header h1 {
+
+            color: #7656a6;
+
+            font-size: 40px;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .english {
+
+            color: #8c8197;
+
+            font-size: 15px;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        .line {
+
+            width: 100px;
+
+            height: 4px;
+
+            background: #b39ddb;
+
+            border-radius: 10px;
+
+            margin: 18px auto;
+
+        }
+
+
+        /* =========================
+           PROFILE TOP
+        ========================= */
+
+        .profile-top {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 35px;
+
+            background: #f5effc;
+
+            border:
+                1px solid #d8c9ed;
+
+            border-radius: 25px;
+
+            padding: 30px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .profile-image {
+
+            flex-shrink: 0;
+
+        }
+
+
+        .profile-image img {
+
+            width: 180px;
+
+            height: 180px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border:
+                5px solid #d8c9ed;
+
+            box-shadow:
+                0 8px 25px
+                rgba(179,157,219,0.35);
+
+        }
+
+
+        .profile-name h2 {
+
+            color: #7656a6;
+
+            font-size: 27px;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .profile-name p {
+
+            color: #8c8197;
+
+            font-size: 16px;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =========================
+           INFORMATION GRID
+        ========================= */
+
+        .info-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .info-card {
+
+            background: #f5effc;
+
+            border:
+                1px solid #d8c9ed;
+
+            border-radius: 22px;
+
+            padding: 25px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .info-card:hover {
+
+            transform:
+                translateY(-5px);
+
+            box-shadow:
+                0 10px 25px
+                rgba(179,157,219,0.25);
+
+        }
+
+
+        .icon {
+
+            font-size: 35px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .info-card h3 {
+
+            color: #7656a6;
+
+            font-size: 20px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .info-card p {
+
+            line-height: 1.9;
+
+            font-size: 16px;
+
+        }
+
+
+        .highlight {
+
+            color: #7656a6;
+
+            font-weight: bold;
+
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills {
+
+            margin-top: 25px;
+
+            background: #f5effc;
+
+            border:
+                1px solid #d8c9ed;
+
+            border-radius: 22px;
+
+            padding: 28px;
+
+        }
+
+
+        .skills h3 {
+
+            color: #7656a6;
+
+            font-size: 22px;
+
+            margin-bottom: 18px;
+
+            text-align: center;
+
+        }
+
+
+        .skill-list {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            gap: 12px;
+
+        }
+
+
+        .skill {
+
+            background: #b39ddb;
+
+            color: white;
+
+            padding:
+                9px 18px;
+
+            border-radius: 50px;
+
+            font-size: 14px;
+
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .button-area {
+
+            text-align: center;
+
+            margin-top: 35px;
+
+        }
+
+
+        .back-button {
+
+            display: inline-block;
+
+            padding:
+                14px 32px;
+
+            background: #b39ddb;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 50px;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+
+            box-shadow:
+                0 8px 20px
+                rgba(179,157,219,0.45);
+
+        }
+
+
+        .back-button:hover {
+
+            background: #9575c5;
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 12px 25px
+                rgba(126,104,168,0.35);
+
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .footer {
+
+            text-align: center;
+
+            margin-top: 30px;
+
+            color: #aaa0b4;
+
+            font-size: 13px;
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            body {
+                padding: 15px;
+            }
+
+
+            .container {
+                padding: 35px 20px;
+            }
+
+
+            .header h1 {
+                font-size: 32px;
+            }
+
+
+            .profile-top {
+
+                flex-direction: column;
+
+                text-align: center;
+
+            }
+
+
+            .profile-image img {
+
+                width: 150px;
+
+                height: 150px;
+
+            }
+
+
+            .profile-name h2 {
+
+                font-size: 23px;
+
+            }
+
+
+            .info-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- ของตกแต่ง -->
+
+    <div class="decoration one">
+        ✨
+    </div>
+
+    <div class="decoration two">
+        💜
+    </div>
+
+    <div class="decoration three">
+        🌷
+    </div>
+
+    <div class="decoration four">
+        🐰
+    </div>
+
+
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+        <div class="rabbit">
+            🐰
+        </div>
+
+        <h1>
+            ประวัติส่วนตัว
+        </h1>
+
+        <p class="english">
+            PERSONAL INFORMATION
+        </p>
+
+        <div class="line"></div>
+
+    </div>
+
+
+
+    <!-- PROFILE -->
+
+    <div class="profile-top">
+
+
+        <div class="profile-image">
+
+            <img
+                src="profile.jpg"
+                alt="รูปโปรไฟล์"
+            >
+
+        </div>
+
+
+        <div class="profile-name">
+
+            <h2>
+                นางสาวนภัสพร สมกระบวน
+            </h2>
+
+            <p>
+                Napatsaporn Somkrabuan
+            </p>
+
+            <p>
+                นักเรียนระดับชั้นมัธยมศึกษาปีที่ 6
+            </p>
+
+            <p>
+                โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- INFORMATION -->
+
+    <div class="info-grid">
+
+
+        <div class="info-card">
+
+            <div class="icon">
+                👤
+            </div>
+
+            <h3>
+                ข้อมูลส่วนตัว
+            </h3>
+
+            <p>
+                <span class="highlight">
+                    ชื่อ :
+                </span>
+                นางสาวนภัสพร สมกระบวน
+            </p>
+
+            <p>
+                <span class="highlight">
+                    ชื่อภาษาอังกฤษ :
+                </span>
+                Napatsaporn Somkrabuan
+            </p>
+
+            <p>
+                <span class="highlight">
+                    ชื่อเล่น :
+                </span>
+                Irene
+            </p>
+
+        </div>
+
+
+
+        <div class="info-card">
+
+            <div class="icon">
+                🏫
+            </div>
+
+            <h3>
+                ประวัติการศึกษา
+            </h3>
+
+            <p>
+                กำลังศึกษาอยู่ชั้น
+                <span class="highlight">
+                    มัธยมศึกษาปีที่ 6
+                </span>
+            </p>
+
+            <p>
+                โรงเรียนบ้านบึง
+                “อุตสาหกรรมนุเคราะห์”
+            </p>
+
+        </div>
+
+
+
+        <div class="info-card">
+
+            <div class="icon">
+                🎯
+            </div>
+
+            <h3>
+                เป้าหมาย
+            </h3>
+
+            <p>
+                มุ่งมั่นศึกษาต่อในระดับมหาวิทยาลัย
+                และพัฒนาความรู้ความสามารถ
+                เพื่อนำไปใช้ในการประกอบอาชีพ
+                ในอนาคต
+            </p>
+
+        </div>
+
+
+
+        <div class="info-card">
+
+            <div class="icon">
+                💜
+            </div>
+
+            <h3>
+                ความสนใจ
+            </h3>
+
+            <p>
+                มีความสนใจด้าน
+                <span class="highlight">
+                    โลจิสติกส์
+                </span>
+                การจัดการ การวางแผน
+                และการทำงานร่วมกับผู้อื่น
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- SKILLS -->
+
+    <div class="skills">
+
+        <h3>
+            ✨ ความสามารถและจุดเด่น ✨
+        </h3>
+
+
+        <div class="skill-list">
+
+            <span class="skill">
+                ความรับผิดชอบ
+            </span>
+
+            <span class="skill">
+                การทำงานเป็นทีม
+            </span>
+
+            <span class="skill">
+                การวางแผน
+            </span>
+
+            <span class="skill">
+                การเรียนรู้สิ่งใหม่
+            </span>
+
+            <span class="skill">
+                ความคิดสร้างสรรค์
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- BACK BUTTON -->
+
+    <div class="button-area">
+
+        <a
+            href="portfolio.html"
+            class="back-button"
+        >
+            🏠 กลับหน้า Portfolio
+        </a>
+
+    </div>
+
+
+
+    <div class="footer">
+
+        © 2026 Irene Portfolio 💜
+
+    </div>
+
+
+</div>
+
+
+</body>
+
+</html>
