@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>มหาวิทยาลัยที่อยากเข้า | Irene Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Arial", "Tahoma", sans-serif;
+            background:
+                radial-gradient(circle at 15% 15%, #e8ddf7, transparent 30%),
+                radial-gradient(circle at 85% 85%, #ddd0f0, transparent 30%),
+                linear-gradient(135deg, #f9f6fd, #eee7f8);
+            color: #40364d;
+            min-height: 100vh;
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.93);
+            border: 2px solid #b39ddb;
+            border-radius: 30px;
+            padding: 45px;
+            box-shadow: 0 15px 50px rgba(179, 157, 219, 0.35);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ของตกแต่ง */
+        .decoration {
+            position: absolute;
+            font-size: 28px;
+            opacity: 0.8;
+        }
+
+        .star1 {
+            top: 25px;
+            left: 30px;
+        }
+
+        .heart {
+            top: 35px;
+            right: 35px;
+        }
+
+        .flower {
+            bottom: 30px;
+            left: 30px;
+        }
+
+        .bunny {
+            bottom: 25px;
+            right: 30px;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        header h1 {
+            color: #7656a6;
+            font-size: 34px;
+            margin-bottom: 8px;
+        }
+
+        header .english {
+            color: #8c8197;
+            font-size: 15px;
+            letter-spacing: 2px;
+        }
+
+        .line {
+            width: 100px;
+            height: 4px;
+            background: #b39ddb;
+            border-radius: 10px;
+            margin: 15px auto;
+        }
+
+        /* Logo */
+        .university-logo {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 25px;
+            background: #f5effc;
+            border: 3px solid #d8c9ed;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px;
+            box-shadow: 0 10px 25px rgba(179, 157, 219, 0.25);
+        }
+
+        .university-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* ชื่อมหาวิทยาลัย */
+        .university-name {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .university-name h2 {
+            color: #7656a6;
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .university-name p {
+            color: #8c8197;
+            font-size: 16px;
+        }
+
+        /* Cards */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: #f5effc;
+            border: 1px solid #d8c9ed;
+            border-radius: 22px;
+            padding: 25px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 25px rgba(179, 157, 219, 0.3);
+        }
+
+        .card h3 {
+            color: #7656a6;
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+
+        .card p {
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        /* ความฝัน */
+        .dream {
+            margin-top: 25px;
+            background: linear-gradient(135deg, #f5effc, #eee5f8);
+            border: 1px solid #d8c9ed;
+            border-radius: 22px;
+            padding: 28px;
+            text-align: center;
+        }
+
+        .dream h3 {
+            color: #7656a6;
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
+
+        .dream p {
+            line-height: 1.9;
+        }
+
+        /* Button */
+        .back-button {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        .back-button a {
+            display: inline-block;
+            text-decoration: none;
+            background: #b39ddb;
+            color: white;
+            padding: 13px 28px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .back-button a:hover {
+            background: #9575c5;
+            transform: translateY(-3px);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #8c8197;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .university-logo {
+                width: 150px;
+                height: 150px;
+            }
+
+            .university-name h2 {
+                font-size: 23px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- ของตกแต่ง -->
+        <div class="decoration star1">✨</div>
+        <div class="decoration heart">💜</div>
+        <div class="decoration flower">🌷</div>
+        <div class="decoration bunny">🐰</div>
+
+        <!-- Header -->
+        <header>
+            <h1>มหาวิทยาลัยที่อยากเข้า</h1>
+            <div class="english">MY DREAM UNIVERSITY</div>
+            <div class="line"></div>
+        </header>
+
+        <!-- Logo มหาวิทยาลัย -->
+        <div class="university-logo">
+            <img src="university-logo.png" alt="โลโก้มหาวิทยาลัย">
+        </div>
+
+        <!-- ชื่อมหาวิทยาลัย -->
+        <div class="university-name">
+            <h2>มหาวิทยาลัยบูรพา</h2>
+            <p>Burapha University</p>
+        </div>
+
+        <!-- ข้อมูล -->
+        <div class="info-grid">
+
+            <div class="card">
+                <h3>🎓 คณะที่สนใจ</h3>
+                <p>
+                    คณะโลจิสติกส์<br>
+                    สาขาการจัดการโลจิสติกส์และโซ่อุปทาน
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>📍 สถานที่</h3>
+                <p>
+                    มหาวิทยาลัยบูรพา<br>
+                    จังหวัดชลบุรี
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>💜 เหตุผลที่อยากเข้า</h3>
+                <p>
+                    สนใจด้านการจัดการโลจิสติกส์และระบบโซ่อุปทาน
+                    และต้องการพัฒนาความรู้เพื่อนำไปใช้ในการเรียน
+                    และการทำงานในอนาคต
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🌟 เป้าหมายในอนาคต</h3>
+                <p>
+                    ตั้งใจศึกษาต่อในสาขาที่สนใจ
+                    พัฒนาทักษะและประสบการณ์ให้มากขึ้น
+                    เพื่อเตรียมพร้อมสำหรับการทำงานในอนาคต
+                </p>
+            </div>
+
+        </div>
+
+        <!-- ความฝัน -->
+        <div class="dream">
+            <h3>🐰 My Dream ✨</h3>
+            <p>
+                “ฉันอยากได้เรียนในสาขาที่ตัวเองสนใจ
+                และใช้ความรู้ที่ได้รับในการสร้างอนาคตที่ดีให้กับตัวเอง”
+            </p>
+        </div>
+
+        <!-- ปุ่มกลับ -->
+        <div class="back-button">
+            <a href="portfolio.html">🏠 กลับหน้า Portfolio</a>
+        </div>
+
+        <footer>
+            © 2026 Irene Portfolio 💜
+        </footer>
+
+    </div>
+
+</body>
+</html>
