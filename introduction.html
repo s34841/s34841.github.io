@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>คำนำ | Irene Portfolio</title>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            font-family:
+                Arial,
+                "Tahoma",
+                sans-serif;
+
+            color: #40364d;
+
+            background:
+
+                radial-gradient(
+                    circle at 15% 15%,
+                    #e8ddf7 0%,
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 85% 85%,
+                    #ddd0f0 0%,
+                    transparent 30%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #f9f6fd,
+                    #eee7f8
+                );
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 30px;
+
+        }
+
+
+        /* =========================
+           MAIN CONTAINER
+        ========================= */
+
+        .container {
+
+            width: 100%;
+
+            max-width: 900px;
+
+            background:
+                rgba(255, 255, 255, 0.93);
+
+            border:
+                2px solid #b39ddb;
+
+            border-radius:
+                30px;
+
+            padding:
+                50px;
+
+            box-shadow:
+                0 15px 50px
+                rgba(179, 157, 219, 0.35);
+
+            backdrop-filter:
+                blur(10px);
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        /* =========================
+           DECORATION
+        ========================= */
+
+        .decoration {
+
+            position: absolute;
+
+            font-size: 35px;
+
+            opacity: 0.75;
+
+        }
+
+
+        .decoration.one {
+
+            top: 25px;
+
+            left: 30px;
+
+        }
+
+
+        .decoration.two {
+
+            top: 35px;
+
+            right: 35px;
+
+        }
+
+
+        .decoration.three {
+
+            bottom: 25px;
+
+            left: 35px;
+
+        }
+
+
+        .decoration.four {
+
+            bottom: 25px;
+
+            right: 35px;
+
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .header {
+
+            text-align: center;
+
+            margin-bottom: 35px;
+
+        }
+
+
+        .rabbit {
+
+            font-size: 48px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .header h1 {
+
+            color: #7656a6;
+
+            font-size: 42px;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .header .english {
+
+            color: #8c8197;
+
+            font-size: 16px;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        .line {
+
+            width: 100px;
+
+            height: 4px;
+
+            background: #b39ddb;
+
+            border-radius: 10px;
+
+            margin: 18px auto;
+
+        }
+
+
+        /* =========================
+           CONTENT
+        ========================= */
+
+        .content {
+
+            background: #f5effc;
+
+            border:
+                1px solid #d8c9ed;
+
+            border-radius: 25px;
+
+            padding: 40px;
+
+            line-height: 2;
+
+            box-shadow:
+                inset 0 0 20px
+                rgba(179,157,219,0.08);
+
+        }
+
+
+        .content p {
+
+            font-size: 18px;
+
+            text-align: justify;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .highlight {
+
+            color: #7656a6;
+
+            font-weight: bold;
+
+        }
+
+
+        /* =========================
+           SIGNATURE
+        ========================= */
+
+        .signature {
+
+            margin-top: 35px;
+
+            text-align: right;
+
+            color: #7656a6;
+
+            font-size: 17px;
+
+        }
+
+
+        .signature .name {
+
+            font-weight: bold;
+
+            font-size: 19px;
+
+            margin-top: 5px;
+
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .button-area {
+
+            text-align: center;
+
+            margin-top: 35px;
+
+        }
+
+
+        .back-button {
+
+            display: inline-block;
+
+            padding:
+                14px 32px;
+
+            background:
+                #b39ddb;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 50px;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+
+            box-shadow:
+                0 8px 20px
+                rgba(179,157,219,0.45);
+
+        }
+
+
+        .back-button:hover {
+
+            background:
+                #9575c5;
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 12px 25px
+                rgba(126,104,168,0.35);
+
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .footer {
+
+            text-align: center;
+
+            margin-top: 30px;
+
+            color: #aaa0b4;
+
+            font-size: 13px;
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            body {
+
+                padding: 15px;
+
+            }
+
+
+            .container {
+
+                padding: 35px 20px;
+
+            }
+
+
+            .header h1 {
+
+                font-size: 32px;
+
+            }
+
+
+            .rabbit {
+
+                font-size: 40px;
+
+            }
+
+
+            .content {
+
+                padding: 25px 20px;
+
+            }
+
+
+            .content p {
+
+                font-size: 16px;
+
+                text-align: left;
+
+            }
+
+
+            .signature {
+
+                font-size: 15px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- ของตกแต่ง -->
+
+    <div class="decoration one">
+        ✨
+    </div>
+
+    <div class="decoration two">
+        💜
+    </div>
+
+    <div class="decoration three">
+        🌷
+    </div>
+
+    <div class="decoration four">
+        ✨
+    </div>
+
+
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+        <div class="rabbit">
+            🐰
+        </div>
+
+        <h1>
+            คำนำ
+        </h1>
+
+        <p class="english">
+            PREFACE
+        </p>
+
+        <div class="line"></div>
+
+    </div>
+
+
+
+    <!-- CONTENT -->
+
+    <div class="content">
+
+        <p>
+            แฟ้มสะสมผลงาน
+            <span class="highlight">
+                (Portfolio)
+            </span>
+            ฉบับนี้จัดทำขึ้นเพื่อรวบรวม
+            ประวัติส่วนตัว ประวัติการศึกษา
+            กิจกรรม ผลงาน และเกียรติบัตร
+            ที่ข้าพเจ้าได้เข้าร่วมและได้รับ
+            ตลอดระยะเวลาการศึกษา
+        </p>
+
+
+        <p>
+            ภายในแฟ้มสะสมผลงานเล่มนี้
+            ประกอบด้วยข้อมูลเกี่ยวกับ
+            ประวัติส่วนตัว ความสามารถ
+            ความสนใจ กิจกรรมต่าง ๆ
+            รวมถึงผลงานและประสบการณ์
+            ที่ข้าพเจ้าได้เรียนรู้และพัฒนาตนเอง
+        </p>
+
+
+        <p>
+            ข้าพเจ้าหวังเป็นอย่างยิ่งว่า
+            แฟ้มสะสมผลงานฉบับนี้จะเป็นส่วนหนึ่ง
+            ที่ช่วยแสดงให้เห็นถึง
+            <span class="highlight">
+                ความตั้งใจ ความสามารถ
+                และความมุ่งมั่น
+            </span>
+            ของข้าพเจ้าได้อย่างชัดเจน
+            และสามารถสะท้อนตัวตน
+            รวมถึงเป้าหมายในการศึกษาต่อ
+            ในอนาคตได้เป็นอย่างดี
+        </p>
+
+
+        <p>
+            สุดท้ายนี้ ข้าพเจ้าขอขอบพระคุณ
+            คุณครู ผู้ปกครอง และทุกคน
+            ที่ให้คำแนะนำ สนับสนุน
+            และเป็นกำลังใจในการพัฒนาตนเอง
+            และการจัดทำแฟ้มสะสมผลงาน
+            ฉบับนี้จนสำเร็จลุล่วงไปด้วยดี
+        </p>
+
+
+
+        <!-- ลายเซ็น -->
+
+        <div class="signature">
+
+            <p>
+                จัดทำโดย
+            </p>
+
+            <p class="name">
+                นางสาวนภัสพร สมกระบวน
+            </p>
+
+            <p>
+                Irene
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- BUTTON -->
+
+    <div class="button-area">
+
+        <a
+            href="portfolio.html"
+            class="back-button"
+        >
+            🏠 กลับหน้าหลัก
+        </a>
+
+    </div>
+
+
+
+    <div class="footer">
+
+        © 2026 Irene Portfolio 💜
+
+    </div>
+
+
+</div>
+
+
+</body>
+
+</html>
