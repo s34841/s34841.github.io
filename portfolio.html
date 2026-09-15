@@ -1,151 +1,243 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>แฟ้มสะสมงาน (Portfolio)</title>
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
-}
-body{
-    background:linear-gradient(135deg,#BA55D3,#DDA0DD,#F8E8FF);
-    padding:40px 20px;
-}
-.container{
-    max-width:900px;
-    margin:auto;
-}
-/* ส่วนหัว */
-.header{
-    background:white;
-    border-radius:20px;
-    padding:30px;
-    text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
-    margin-bottom:30px;
-}
-.profile{
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    object-fit:cover;
-    border:5px solid #BA55D3;
-    margin-bottom:15px;
-}
-.header h1{
-    color:#7B1FA2;
-    margin-bottom:10px;
-}
-.header p{
-    color:#666;
-}
-/* กล่องผลงาน */
-.project-card{
-    display:flex;
-    align-items:center;
-    gap:20px;
-    background:white;
-    margin:20px 0;
-    padding:20px;
-    border-radius:18px;
-    box-shadow:0 8px 20px rgba(0,0,0,.12);
-    transition:.3s;
-}
-.project-card:hover{
-    transform:translateY(-6px);
-}
-.project-img{
-    width:180px;
-    height:130px;
-    border-radius:15px;
-    object-fit:cover;
-    border:3px solid #BA55D3;
-}
-.project-text{
-    flex:1;
-    text-align:left;
-}
-.project-text h3{
-    color:#7B1FA2;
-    margin-bottom:10px;
-}
-.project-text p{
-    color:#555;
-    line-height:1.8;
-}
-/* ปุ่ม */
-.btn{
-    display:inline-block;
-    margin-top:30px;
-    background:#7B1FA2;
-    color:white;
-    text-decoration:none;
-    padding:12px 30px;
-    border-radius:30px;
-    transition:.3s;
-}
-.btn:hover{
-    background:#5E1580;
-}
-/* มือถือ */
-@media(max-width:700px){
-.project-card{
-flex-direction:column;
-text-align:center;
-}
-.project-text{
-text-align:center;
-}
-.project-img{
-width:100%;
-height:220px;
-}
-.profile{
-width:150px;
-height:150px;
-}
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Irene Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Arial, "Tahoma", sans-serif;
+
+            background:
+                radial-gradient(circle at 10% 10%, #e8ddf7 0%, transparent 30%),
+                radial-gradient(circle at 90% 90%, #ddd0f0 0%, transparent 30%),
+                linear-gradient(135deg, #f9f6fd, #eee7f8);
+
+            color: #40364d;
+            padding: 30px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: auto;
+
+            background: rgba(255,255,255,0.92);
+            border: 2px solid #b39ddb;
+            border-radius: 30px;
+
+            padding: 45px;
+
+            box-shadow: 0 15px 50px rgba(179,157,219,0.35);
+            backdrop-filter: blur(10px);
+        }
+
+        .top {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .flowers {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            color: #7656a6;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #8c8197;
+            font-size: 17px;
+        }
+
+        /* เมนู */
+
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 35px;
+        }
+
+        .menu-card {
+            text-decoration: none;
+            color: #40364d;
+
+            background: #f5effc;
+
+            border: 1px solid #d8c9ed;
+            border-radius: 22px;
+
+            padding: 28px 20px;
+
+            text-align: center;
+
+            transition: 0.3s;
+
+            box-shadow: 0 5px 15px rgba(179,157,219,0.15);
+        }
+
+        .menu-card:hover {
+            transform: translateY(-7px);
+
+            background: #eee4fa;
+
+            box-shadow:
+                0 12px 25px rgba(179,157,219,0.35);
+
+            border-color: #b39ddb;
+        }
+
+        .icon {
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        .menu-card h2 {
+            color: #7656a6;
+            font-size: 21px;
+            margin-bottom: 8px;
+        }
+
+        .menu-card p {
+            color: #8c8197;
+            font-size: 14px;
+        }
+
+        .back {
+            display: inline-block;
+
+            margin-top: 35px;
+
+            padding: 12px 25px;
+
+            background: #b39ddb;
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 50px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .back:hover {
+            background: #9575c5;
+            transform: translateY(-3px);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 35px;
+            color: #aaa0b4;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 15px;
+            }
+
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .menu {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
+
 <body>
+
 <div class="container">
-    <div class="header">
-        <!-- เปลี่ยนชื่อไฟล์เป็นรูปของตนเอง -->
-        <img src="IMG_7943.jpeg" class="profile" alt="รูปโปรไฟล์">
-        <h1>แฟ้มสะสมงาน (Portfolio)</h1>
-        <p>นี่คือพื้นที่รวบรวมผลงานและกิจกรรมที่ภาคภูมิใจ</p>
-    </div>
-    <!-- ผลงานที่ 1 -->
-    <div class="project-card">
-        <img src="project1.jpg" class="project-img" alt="ผลงาน">
-        <div class="project-text">
-            <h3>1. โครงงานวิทยาศาสตร์คำนวณ</h3>
-            <p>
-                รายละเอียดชิ้นงาน : เขียนอธิบายสั้น ๆ ว่าทำอะไร
-                ได้เรียนรู้อะไร และพัฒนาทักษะด้านใดบ้าง
-            </p>
+
+    <div class="top">
+
+        <div class="flowers">
+            🐰 ✨ 💜 ✨ 🐰
         </div>
+
+        <h1>My Portfolio</h1>
+
+        <p class="subtitle">
+            ยินดีต้อนรับเข้าสู่แฟ้มสะสมผลงานของฉัน
+        </p>
+
     </div>
-    <!-- ผลงานที่ 2 -->
-    <div class="project-card">
-        <img src="certificate.jpg" class="project-img" alt="เกียรติบัตร">
-        <div class="project-text">
-            <h3>2. กิจกรรม / เกียรติบัตรที่ได้รับ</h3>
-            <p>
-                รายละเอียดกิจกรรม การแข่งขัน หรือการอบรม
-                พร้อมประสบการณ์และสิ่งที่ได้รับจากการเข้าร่วม
-            </p>
-        </div>
-    </div>
-    <center>
-        <a href="index.html" class="btn">
-            ⬅ กลับหน้าแรก
+
+
+    <div class="menu">
+
+        <a href="introduction.html" class="menu-card">
+            <div class="icon">📖</div>
+            <h2>คำนำ</h2>
+            <p>Introduction</p>
         </a>
-    </center>
+
+
+        <a href="profile.html" class="menu-card">
+            <div class="icon">👩🏻‍🎓</div>
+            <h2>ประวัติส่วนตัว</h2>
+            <p>Personal Information</p>
+        </a>
+
+
+        <a href="activities.html" class="menu-card">
+            <div class="icon">🏆</div>
+            <h2>กิจกรรม</h2>
+            <p>Activities</p>
+        </a>
+
+
+        <a href="certificates.html" class="menu-card">
+            <div class="icon">📜</div>
+            <h2>เกียรติบัตร</h2>
+            <p>Certificates</p>
+        </a>
+
+
+        <a href="university.html" class="menu-card">
+            <div class="icon">🎓</div>
+            <h2>มหาวิทยาลัยที่อยากเข้า</h2>
+            <p>My Dream University</p>
+        </a>
+
+    </div>
+
+
+    <div style="text-align:center;">
+        <a href="index.html" class="back">
+            🏠 กลับหน้าหลัก
+        </a>
+    </div>
+
+
+    <div class="footer">
+        © 2026 Irene Portfolio
+    </div>
+
 </div>
+
 </body>
 </html>
