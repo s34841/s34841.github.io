@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>เกียรติบัตร | Irene Portfolio</title>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            font-family:
+                Arial,
+                "Tahoma",
+                sans-serif;
+
+            color: #40364d;
+
+            background:
+
+                radial-gradient(
+                    circle at 15% 15%,
+                    #e8ddf7 0%,
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 85% 85%,
+                    #ddd0f0 0%,
+                    transparent 30%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #f9f6fd,
+                    #eee7f8
+                );
+
+            padding: 30px;
+
+        }
+
+
+        /* =========================
+           MAIN CONTAINER
+        ========================= */
+
+        .container {
+
+            width: 100%;
+
+            max-width: 1000px;
+
+            margin: auto;
+
+            background:
+                rgba(255,255,255,0.93);
+
+            border:
+                2px solid #b39ddb;
+
+            border-radius:
+                30px;
+
+            padding:
+                45px;
+
+            box-shadow:
+                0 15px 50px
+                rgba(179,157,219,0.35);
+
+            backdrop-filter:
+                blur(10px);
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        /* =========================
+           DECORATION
+        ========================= */
+
+        .decoration {
+
+            position: absolute;
+
+            font-size: 35px;
+
+            opacity: 0.75;
+
+        }
+
+
+        .one {
+            top: 25px;
+            left: 30px;
+        }
+
+
+        .two {
+            top: 30px;
+            right: 35px;
+        }
+
+
+        .three {
+            bottom: 25px;
+            left: 35px;
+        }
+
+
+        .four {
+            bottom: 25px;
+            right: 35px;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .header {
+
+            text-align: center;
+
+            margin-bottom: 35px;
+
+        }
+
+
+        .rabbit {
+
+            font-size: 48px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .header h1 {
+
+            color: #7656a6;
+
+            font-size: 40px;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .english {
+
+            color: #8c8197;
+
+            font-size: 15px;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        .line {
+
+            width: 100px;
+
+            height: 4px;
+
+            background: #b39ddb;
+
+            border-radius: 10px;
+
+            margin: 18px auto;
+
+        }
+
+
+        /* =========================
+           CERTIFICATE GRID
+        ========================= */
+
+        .certificate-container {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+
+        }
+
+
+        /* =========================
+           CERTIFICATE CARD
+        ========================= */
+
+        .certificate-card {
+
+            background: #f5effc;
+
+            border:
+                1px solid #d8c9ed;
+
+            border-radius: 25px;
+
+            overflow: hidden;
+
+            transition: 0.3s;
+
+            box-shadow:
+                0 5px 15px
+                rgba(179,157,219,0.12);
+
+        }
+
+
+        .certificate-card:hover {
+
+            transform:
+                translateY(-8px);
+
+            box-shadow:
+                0 15px 30px
+                rgba(179,157,219,0.30);
+
+        }
+
+
+        /* =========================
+           CERTIFICATE IMAGE
+        ========================= */
+
+        .certificate-image {
+
+            width: 100%;
+
+            height: 230px;
+
+            background: #eee4fa;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            overflow: hidden;
+
+            border-bottom:
+                1px solid #d8c9ed;
+
+        }
+
+
+        .certificate-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: 0.4s;
+
+        }
+
+
+        .certificate-card:hover
+        .certificate-image img {
+
+            transform:
+                scale(1.05);
+
+        }
+
+
+        /* =========================
+           CARD CONTENT
+        ========================= */
+
+        .certificate-content {
+
+            padding: 22px;
+
+            text-align: center;
+
+        }
+
+
+        .certificate-number {
+
+            display: inline-block;
+
+            background: #b39ddb;
+
+            color: white;
+
+            padding:
+                5px 14px;
+
+            border-radius: 50px;
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .certificate-content h2 {
+
+            color: #7656a6;
+
+            font-size: 20px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .certificate-content p {
+
+            color: #51465d;
+
+            font-size: 14px;
+
+            line-height: 1.8;
+
+        }
+
+
+        .certificate-date {
+
+            margin-top: 12px;
+
+            padding-top: 12px;
+
+            border-top:
+                1px solid #d8c9ed;
+
+            color: #8c8197;
+
+            font-size: 13px;
+
+        }
+
+
+        /* =========================
+           BOTTOM MESSAGE
+        ========================= */
+
+        .message {
+
+            margin-top: 30px;
+
+            padding: 22px;
+
+            background: #f5effc;
+
+            border:
+                1px solid #d8c9ed;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            color: #8c8197;
+
+            line-height: 1.8;
+
+        }
+
+
+        .message strong {
+
+            color: #7656a6;
+
+        }
+
+
+        /* =========================
+           BACK BUTTON
+        ========================= */
+
+        .button-area {
+
+            text-align: center;
+
+            margin-top: 35px;
+
+        }
+
+
+        .back-button {
+
+            display: inline-block;
+
+            padding:
+                14px 32px;
+
+            background: #b39ddb;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 50px;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+
+            box-shadow:
+                0 8px 20px
+                rgba(179,157,219,0.45);
+
+        }
+
+
+        .back-button:hover {
+
+            background: #9575c5;
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 12px 25px
+                rgba(126,104,168,0.35);
+
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .footer {
+
+            text-align: center;
+
+            margin-top: 30px;
+
+            color: #aaa0b4;
+
+            font-size: 13px;
+
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .certificate-container {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            body {
+
+                padding: 15px;
+
+            }
+
+
+            .container {
+
+                padding:
+                    35px 20px;
+
+            }
+
+
+            .header h1 {
+
+                font-size: 32px;
+
+            }
+
+
+            .rabbit {
+
+                font-size: 40px;
+
+            }
+
+
+            .certificate-container {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .certificate-image {
+
+                height: 240px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- ของตกแต่ง -->
+
+    <div class="decoration one">
+        ✨
+    </div>
+
+    <div class="decoration two">
+        💜
+    </div>
+
+    <div class="decoration three">
+        🌷
+    </div>
+
+    <div class="decoration four">
+        🐰
+    </div>
+
+
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+        <div class="rabbit">
+            🐰
+        </div>
+
+        <h1>
+            เกียรติบัตร
+        </h1>
+
+        <p class="english">
+            CERTIFICATES
+        </p>
+
+        <div class="line"></div>
+
+    </div>
+
+
+
+    <!-- =========================
+         CERTIFICATES
+    ========================= -->
+
+    <div class="certificate-container">
+
+
+        <!-- ใบที่ 1 -->
+
+        <div class="certificate-card">
+
+
+            <div class="certificate-image">
+
+                <img
+                    src="certificate1.jpg"
+                    alt="เกียรติบัตรที่ 1"
+                >
+
+            </div>
+
+
+            <div class="certificate-content">
+
+                <span class="certificate-number">
+                    CERTIFICATE 01
+                </span>
+
+                <h2>
+                    🏅 เกียรติบัตรที่ 1
+                </h2>
+
+                <p>
+                    ใส่ชื่อเกียรติบัตร
+                    หรือชื่อกิจกรรมที่ได้รับ
+                    ที่นี่
+                </p>
+
+                <div class="certificate-date">
+                    📅 ปีที่ได้รับ : 20XX
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ใบที่ 2 -->
+
+        <div class="certificate-card">
+
+
+            <div class="certificate-image">
+
+                <img
+                    src="certificate2.jpg"
+                    alt="เกียรติบัตรที่ 2"
+                >
+
+            </div>
+
+
+            <div class="certificate-content">
+
+                <span class="certificate-number">
+                    CERTIFICATE 02
+                </span>
+
+                <h2>
+                    🏅 เกียรติบัตรที่ 2
+                </h2>
+
+                <p>
+                    ใส่ชื่อเกียรติบัตร
+                    หรือชื่อกิจกรรมที่ได้รับ
+                    ที่นี่
+                </p>
+
+                <div class="certificate-date">
+                    📅 ปีที่ได้รับ : 20XX
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ใบที่ 3 -->
+
+        <div class="certificate-card">
+
+
+            <div class="certificate-image">
+
+                <img
+                    src="certificate3.jpg"
+                    alt="เกียรติบัตรที่ 3"
+                >
+
+            </div>
+
+
+            <div class="certificate-content">
+
+                <span class="certificate-number">
+                    CERTIFICATE 03
+                </span>
+
+                <h2>
+                    🏅 เกียรติบัตรที่ 3
+                </h2>
+
+                <p>
+                    ใส่ชื่อเกียรติบัตร
+                    หรือชื่อกิจกรรมที่ได้รับ
+                    ที่นี่
+                </p>
+
+                <div class="certificate-date">
+                    📅 ปีที่ได้รับ : 20XX
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- MESSAGE -->
+
+    <div class="message">
+
+        ✨
+        <strong>
+            ทุกประสบการณ์คือการเรียนรู้
+        </strong>
+        ✨
+
+        <br>
+
+        เกียรติบัตรเหล่านี้เป็นส่วนหนึ่งของ
+        ความพยายามและประสบการณ์
+        ที่ได้สั่งสมตลอดช่วงการศึกษา
+
+    </div>
+
+
+
+    <!-- BACK BUTTON -->
+
+    <div class="button-area">
+
+        <a
+            href="portfolio.html"
+            class="back-button"
+        >
+            🏠 กลับหน้า Portfolio
+        </a>
+
+    </div>
+
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        © 2026 Irene Portfolio 💜
+
+    </div>
+
+
+</div>
+
+
+</body>
+
+</html>
